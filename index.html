@@ -8,7 +8,22 @@
   <title>Guthub Finder</title>
 </head>
 <body>
-<h1>Search Github users</h1>
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="#" class="navbar-brand">Github Finder</a>
+    </div>
+  </nav>
+
+  <div class="container searchContainer">
+    <div class="search card card-boby p-5">
+      <h2>Search Github Users</h2>
+      <p class="lead">Enter a username to fetch profile and Repo</p>
+      <input type="text" id="searchUser" class="form-control" placeholder="Github Username...">
+    </div>
+    <br>
+    <div id="profile"></div>
+  </div>
+   <footer class="mt-5 p-3 text-center bg-light">Github Finder &copy; siyath kasali</footer>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
