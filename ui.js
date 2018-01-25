@@ -27,15 +27,38 @@ class UI{
         </div>
       </div>
       <h3 class="page-heading mb-3">Latest Repos</h3>
-      <div id="repos"></div>
+      <div id="repos">
+      </div>
     `
+  }
+
+  showRepos(repos){
+    console.log(repos);
+    let output = '';
+    repos.forEach(function(repo){
+      output +=`
+      <div class="card card-body">
+      <div class="row">
+      <div class="col-md-6">
+      <a href="${repo.html_url}">${repo.name}</a>
+      </div>
+      <div class="col-md-6">
+      <span class="badge badge-primary">Star: ${repo.stargazers_count}</span>
+      <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
+      <span class="badge badge-success">Forks: ${repo.forms_count}</span>
+      </div>
+      </div>
+      </div>
+      `
+    });
+    document.getElementById('repos').innerHTML = output;
   }
 
   clearProfile(){
     this.profile.innerHTML = '';
   }
 
-  showAlert(msg,color){
+  showAlert(msg,color) {
     this.clearAlert();
     const errorDiv = document.createElement('div');
     errorDiv.className = color;
